@@ -15,7 +15,6 @@ import re
 incsv=r"C:\Users\narju\OneDrive - Intel Corporation\Documents\Device\804_Dispo\D340FCA0_ZTO_Hot_As_FIN_ISO\perf_wfr2.csv"
 d=pd.read_csv(incsv)
 
-
 #%%
 prod=d.columns[d.columns.str.contains('PRODUCT', regex=True)].to_list()
 assert len(prod)==1
@@ -27,9 +26,6 @@ wid='WAFER'
 lot7='LOT7'
 
 #%%
-
-
-#%% 
 #Insert I/CV if not present
 
 def calc_change(val_array, bsl_wfr):
@@ -146,4 +142,5 @@ if True:
 
 # if __name__=="__main__":
 #     delta=main()
+
     
